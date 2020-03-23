@@ -5,6 +5,9 @@
   "repository": "git@github.com:ricosmall/algorithm.git",
   "author": "ricosmall <805163443@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "jest": "^25.1.0"
   }

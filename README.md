@@ -4,4 +4,4 @@ Normal algorithm implementaion.
 
 ## Table Contents
 
-[] [Stack](./stack.js)
+[x] [Stack](./stack.js)

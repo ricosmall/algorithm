@@ -2,7 +2,7 @@
 
 Normal algorithm implementaion.
 
-## Table Contents
+## Table of Contents
 
 - [x] [Stack](./src/stack.js)
 - [ ] [Queue](./src/queue.js)

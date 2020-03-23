@@ -1,5 +1,6 @@
-const Stack = require('../src/stack.js')
+import Stack from '../src/stack'
 
 test('create a instance which items to be an array', () => {
-  expect(new Stack().items).toEqual([])
+  const stack = new Stack()
+  expect(stack.items).toEqual([])
 })

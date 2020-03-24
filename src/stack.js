@@ -1,4 +1,4 @@
-class Stack {
+export default class Stack {
   constructor () {
     this.count = 0
     this.items = {}
@@ -23,7 +23,7 @@ class Stack {
     if (this.isEmpty()) {
       return undefined
     }
-    return this.items[this.count]
+    return this.items[this.count - 1]
   }
 
   size () {
@@ -43,7 +43,7 @@ class Stack {
     if (this.isEmpty()) {
       return ''
     }
-    let str = this.items[0]
+    let str = `${this.items[0]}`
     for (let i = 1; i < this.count; i++) {
       str += `,${this.items[i]}`
     }

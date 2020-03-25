@@ -1,5 +1,10 @@
 import Stack from '../data-structures/stack'
 
+/**
+ * transform a decimal to another base number
+ * @param {Number} decNumber a decimal number
+ * @param {Number} base the base will transform to, from 2 to 36
+ */
 export default function baseConverter(decNumber, base = 2) {
   let num = decNumber
   if (num < 1) return num.toString()

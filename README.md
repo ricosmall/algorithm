@@ -1,6 +1,6 @@
 # algorithm
 
-Normal algorithm implementaion.
+Normal data structures and algorithms implementaion.
 
 ## Table of Contents
 

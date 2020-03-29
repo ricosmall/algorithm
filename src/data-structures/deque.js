@@ -1,11 +1,11 @@
 export default class Deque {
-  constructor () {
+  constructor() {
     this.count = 0
     this.lowestCount = 0
     this.items = {}
   }
 
-  addFront (element) {
+  addFront(element) {
     if (this.isEmpty()) {
       this.addBack(element)
     } else if (this.lowestCount > 0) {
@@ -21,12 +21,12 @@ export default class Deque {
     }
   }
 
-  addBack (element) {
+  addBack(element) {
     this.items[this.count] = element
     this.count += 1
   }
 
-  removeFront () {
+  removeFront() {
     if (this.isEmpty()) {
       return undefined
     }
@@ -36,7 +36,7 @@ export default class Deque {
     return result
   }
 
-  removeBack () {
+  removeBack() {
     if (this.isEmpty()) {
       return undefined
     }
@@ -46,29 +46,29 @@ export default class Deque {
     return result
   }
 
-  peekFront () {
+  peekFront() {
     return this.items[this.lowestCount]
   }
 
-  peekBack () {
+  peekBack() {
     return this.items[this.count - 1]
   }
 
-  size () {
+  size() {
     return this.count - this.lowestCount
   }
 
-  isEmpty () {
+  isEmpty() {
     return this.size() === 0
   }
 
-  clear () {
+  clear() {
     this.count = 0
     this.lowestCount = 0
     this.items = {}
   }
 
-  toString () {
+  toString() {
     if (this.isEmpty()) {
       return ''
     }

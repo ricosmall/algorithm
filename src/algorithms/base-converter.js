@@ -12,12 +12,12 @@ export default function baseConverter(decNumber, base = 2) {
   const stack = new Stack()
   let rem
   let result = ''
-  while(num > 0) {
+  while (num > 0) {
     rem = Math.floor(num % base)
     stack.push(baseString[rem])
     num = Math.floor(num / base)
   }
-  while(!stack.isEmpty()) {
+  while (!stack.isEmpty()) {
     result += stack.pop()
   }
   return result

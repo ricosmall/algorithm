@@ -54,7 +54,7 @@ describe('Stack', () => {
     expect(stack.size()).toBe(2)
     expect(stack.peek()).toBe(2)
     expect(stack.size()).toBe(2)
-    
+
     stack.push(3)
     expect(stack.peek()).toBe(3)
     expect(stack.size()).toBe(3)

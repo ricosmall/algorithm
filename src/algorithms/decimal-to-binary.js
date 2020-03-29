@@ -4,7 +4,7 @@ import Stack from '../data-structures/stack'
  * transform a decimal number to a binary number
  * @param {Number} decNumber a decimal number
  */
-export default function decimalToBinary (decNumber) {
+export default function decimalToBinary(decNumber) {
   let num = decNumber
   if (num < 2) return num.toString()
   const stack = new Stack()

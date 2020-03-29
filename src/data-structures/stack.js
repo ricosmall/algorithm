@@ -1,15 +1,15 @@
 export default class Stack {
-  constructor () {
+  constructor() {
     this.count = 0
     this.items = {}
   }
 
-  push (element) {
+  push(element) {
     this.items[this.count] = element
     this.count += 1
   }
 
-  pop () {
+  pop() {
     if (this.isEmpty()) {
       return undefined
     }
@@ -19,27 +19,27 @@ export default class Stack {
     return result
   }
 
-  peek () {
+  peek() {
     if (this.isEmpty()) {
       return undefined
     }
     return this.items[this.count - 1]
   }
 
-  size () {
+  size() {
     return this.count
   }
 
-  clear () {
+  clear() {
     this.items = {}
     this.count = 0
   }
 
-  isEmpty () {
+  isEmpty() {
     return this.count === 0
   }
 
-  toString () {
+  toString() {
     if (this.isEmpty()) {
       return ''
     }

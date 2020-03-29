@@ -1,16 +1,16 @@
 export default class Queue {
-  constructor () {
+  constructor() {
     this.items = {}
     this.count = 0
     this.lowestCount = 0
   }
 
-  enqueue (element) {
+  enqueue(element) {
     this.items[this.count] = element
     this.count += 1
   }
 
-  dequeue () {
+  dequeue() {
     if (this.isEmpty()) {
       return undefined
     }
@@ -20,28 +20,28 @@ export default class Queue {
     return result
   }
 
-  peek () {
+  peek() {
     if (this.isEmpty()) {
       return undefined
     }
     return this.items[this.lowestCount]
   }
 
-  size () {
+  size() {
     return this.count - this.lowestCount
   }
 
-  isEmpty () {
+  isEmpty() {
     return this.size() === 0
   }
 
-  clear () {
+  clear() {
     this.items = {}
     this.count = 0
     this.lowestCount = 0
   }
 
-  toString () {
+  toString() {
     if (this.isEmpty()) {
       return ''
     }

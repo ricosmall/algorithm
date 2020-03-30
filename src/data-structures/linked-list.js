@@ -94,7 +94,7 @@ export default class LinkedList {
     let str = `${this.head.element}`
     let current = this.head.next
     for (let i = 0; i < this.count && current !== null; i++) {
-      str += `${current.element}`
+      str += `,${current.element}`
       current = current.next
     }
     return str

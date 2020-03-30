@@ -24,7 +24,7 @@ export default class LinkedList {
   insert(element, position) {
     if (position >= 0 && position <= this.count) {
       const node = new Node(element)
-      if ((position = 0)) {
+      if (position === 0) {
         const current = this.head
         node.next = current
         this.head = node
@@ -71,7 +71,7 @@ export default class LinkedList {
   indexOf(element) {
     let current = this.head
     for (let i = 0; i < this.count && current !== null; i++) {
-      if (this.equalsFn(current, element)) {
+      if (this.equalsFn(current.element, element)) {
         return i
       }
       current = current.next

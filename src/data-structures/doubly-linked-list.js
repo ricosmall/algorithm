@@ -24,7 +24,7 @@ export default class DoublyLinkedList extends LinkedList {
   insert(element, position) {
     if (position >= 0 && position <= this.count) {
       const node = new DoublyNode(element)
-      if (index === 0) {
+      if (position === 0) {
         if (this.head === null) {
           this.head = node
           this.tail = node
@@ -34,7 +34,7 @@ export default class DoublyLinkedList extends LinkedList {
           current.prev = node
           this.head = node
         }
-      } else if (index === this.count) {
+      } else if (position === this.count) {
         const current = this.tail
         node.prev = current
         current.next = node
@@ -54,7 +54,7 @@ export default class DoublyLinkedList extends LinkedList {
   }
 
   removeAt(index) {
-    if (index >= 0 && index <= this.count) {
+    if (index >= 0 && index < this.count) {
       let current = this.head
       if (index === 0) {
         this.head = current.next
@@ -98,7 +98,8 @@ export default class DoublyLinkedList extends LinkedList {
   }
 
   clear() {
-    super.clear()
+    this.count = 0
+    this.head = null
     this.tail = null
   }
 }

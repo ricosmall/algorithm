@@ -10,12 +10,12 @@ export default class CircularLinkedList extends LinkedList {
   insert(element, position) {
     if (position >= 0 && position <= this.count) {
       const node = new Node(element)
-      if (index === 0) {
+      if (position === 0) {
         if (this.head === null) {
           this.head = node
           node.next = this.head
         } else {
-          const tail = this.getElementAt(this.size())
+          const tail = this.getElementAt(this.size() - 1)
           node.next = this.head
           tail.next = node
           this.head = node
@@ -39,10 +39,9 @@ export default class CircularLinkedList extends LinkedList {
           this.head = null
         } else {
           const removed = this.head
-          current = removed.next
-          this.head = current
-          const tail = this.getElementAt(this.size())
-          tail.next = current
+          current = this.getElementAt(this.size() - 1)
+          this.head = this.head.next
+          current.next = this.head
           current = removed
         }
       } else {

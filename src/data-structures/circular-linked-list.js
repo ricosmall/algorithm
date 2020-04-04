@@ -54,4 +54,17 @@ export default class CircularLinkedList extends LinkedList {
     }
     return undefined
   }
+
+  push(element) {
+    const node = new Node(element)
+    if (this.head === null) {
+      this.head = node
+      node.next = this.head
+    } else {
+      const tail = this.getElementAt(this.size() - 1)
+      node.next = this.head
+      tail.next = node
+    }
+    this.count += 1
+  }
 }

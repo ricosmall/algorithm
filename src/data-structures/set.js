@@ -40,4 +40,36 @@ export default class Set {
     }
     return values
   }
+  union(otherSet) {
+    const unionSet = new Set()
+    let values = otherSet.values()
+    for (let i = 0; i < values.length; i++) {
+      unionSet.add(values[i])
+    }
+    values = this.values()
+    for (let i = 0; i < values.length; i++) {
+      unionSet.add(values[i])
+    }
+    return unionSet
+  }
+  intersection(otherSet) {
+    const intersectionSet = new Set()
+    const values = this.values()
+    for (let i = 0; i < values.length; i++) {
+      if (otherSet.has(values[i])) {
+        intersection.add(values[i])
+      }
+    }
+    return intersectionSet
+  }
+  difference(otherSet) {
+    const differenceSet = new Set()
+    const values = this.values()
+    for (let i = 0; i < largeValues.length; i++) {
+      if (!otherSet.has(values[i])) {
+        differenceSet.add(values[i])
+      }
+    }
+    return differenceSet
+  }
 }

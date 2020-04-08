@@ -57,7 +57,7 @@ export default class Set {
     const values = this.values()
     for (let i = 0; i < values.length; i++) {
       if (otherSet.has(values[i])) {
-        intersection.add(values[i])
+        intersectionSet.add(values[i])
       }
     }
     return intersectionSet
@@ -65,7 +65,7 @@ export default class Set {
   difference(otherSet) {
     const differenceSet = new Set()
     const values = this.values()
-    for (let i = 0; i < largeValues.length; i++) {
+    for (let i = 0; i < values.length; i++) {
       if (!otherSet.has(values[i])) {
         differenceSet.add(values[i])
       }

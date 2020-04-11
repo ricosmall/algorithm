@@ -21,7 +21,7 @@ export default class HashTable {
     return this.loseloseHashCode(key)
   }
   put(key, value) {
-    if (!key && !value) {
+    if (key && value) {
       const position = this.hashCode(key)
       this.table[position] = new ValuePairs(key, value)
       return true

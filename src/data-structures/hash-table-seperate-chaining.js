@@ -5,7 +5,7 @@ import LinkedList from './linked-list'
 
 export default class HashTableSeperateChaining extends HashTable {
   constructor(toStringFn = defaultToString) {
-    this.toStringFn = toStringFn
+    super(toStringFn)
     this.table = {}
   }
 

@@ -41,8 +41,8 @@ export default class HashTableLinearProbingLazy extends HashTable {
           return true
         }
       }
-      return false
     }
+    return false
   }
   verifyRemoveSideEffect(key, removedPosition) {
     const hash = this.hashCode(key)

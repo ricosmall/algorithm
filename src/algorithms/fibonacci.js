@@ -15,3 +15,15 @@ export function fibonacci(n) {
   if (n < 2) return n
   return fibonacci(n - 1) + fibonacci(n - 2)
 }
+
+export function fibonacciMemoryAll(n) {
+  const memo = [0, 1]
+  const fibonacci = function(n) {
+    if (memo[n] != null) {
+      return memo[n]
+    }
+    memo[n] = fibonacci(n - 1) + fibonacci(n - 2)
+    return memo[n]
+  }
+  return fibonacci(n)
+}

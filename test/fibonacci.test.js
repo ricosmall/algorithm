@@ -1,4 +1,4 @@
-import { fibonacciIteration, fibonacci } from '../src/algorithms/fibonacci'
+import { fibonacciIteration, fibonacci, fibonacciMemoryAll } from '../src/algorithms/fibonacci'
 
 describe('fibonacci', () => {
   test('fibonacci iteration', () => {
@@ -17,5 +17,14 @@ describe('fibonacci', () => {
     expect(fibonacci(3)).toBe(2)
     expect(fibonacci(4)).toBe(3)
     expect(fibonacci(5)).toBe(5)
+  })
+
+  test('fibonacci with memory', () => {
+    expect(fibonacciMemoryAll(0)).toBe(0)
+    expect(fibonacciMemoryAll(1)).toBe(1)
+    expect(fibonacciMemoryAll(2)).toBe(1)
+    expect(fibonacciMemoryAll(3)).toBe(2)
+    expect(fibonacciMemoryAll(4)).toBe(3)
+    expect(fibonacciMemoryAll(5)).toBe(5)
   })
 })

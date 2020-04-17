@@ -1,5 +1,5 @@
 export default class Node {
-  constructor() {
+  constructor(key) {
     this.key = key
     this.left = null
     this.right = null

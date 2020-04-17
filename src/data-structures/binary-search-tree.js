@@ -29,7 +29,7 @@ export default class BinarySearchTree {
     }
   }
   search(key) {
-    this.searchNode(this.root, key)
+    return this.searchNode(this.root, key)
   }
   searchNode(node, key) {
     if (!node) {
@@ -93,7 +93,9 @@ export default class BinarySearchTree {
     }
     return current
   }
-  remove(key) {}
+  remove(key) {
+    this.root = this.removeNode(this.root, key)
+  }
   removeNode(node, key) {
     if (!node) {
       return null

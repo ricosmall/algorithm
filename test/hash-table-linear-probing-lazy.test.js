@@ -6,6 +6,15 @@ describe('HashTableLinearProbingLazy', () => {
     hashTable = new HashTableLinearProbingLazy()
   })
 
+  test('get hash code of a key', () => {
+    let key = 'hello'
+    expect(hashTable.hashCode(key)).toBe(14)
+    key = 'world'
+    expect(hashTable.hashCode(key)).toBe(34)
+    key = 'hello'
+    expect(hashTable.hashCode(key)).toBe(14)
+  })
+
   test('put element', () => {
     let key = 'hello'
     let value = 'world'
@@ -18,6 +27,10 @@ describe('HashTableLinearProbingLazy', () => {
     value = null
     expect(hashTable.put(key, value)).toBe(false)
     expect(hashTable.get(key)).toBe(undefined)
+    key = 'hlleo'
+    value = 'test'
+    expect(hashTable.put(key, value)).toBe(true)
+    expect(hashTable.get(key)).toBe(value)
   })
 
   test('remove element', () => {
@@ -29,6 +42,15 @@ describe('HashTableLinearProbingLazy', () => {
     expect(hashTable.get(key)).toBe(undefined)
     key = 'test'
     expect(hashTable.remove(key)).toBe(false)
+    key = 'hlleo'
+    value = 'test'
+    hashTable.put(key, value)
+    key = 'hello'
+    value = 'world'
+    hashTable.put(key, value)
+    expect(hashTable.get(key)).toBe(value)
+    expect(hashTable.remove(key)).toBe(true)
+    expect(hashTable.get(key)).toBe(undefined)
   })
 
   test('get element', () => {

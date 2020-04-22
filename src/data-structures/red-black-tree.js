@@ -1,5 +1,5 @@
 import RedBlackNode from '../models/red-black-node'
-import {defaultCompare, Colors, Compare} from '../utils'
+import { defaultCompare, Colors, Compare } from '../utils'
 import BinarySearchTree from './binary-search-tree'
 
 export default class RedBlackTree extends BinarySearchTree {
@@ -35,7 +35,55 @@ export default class RedBlackTree extends BinarySearchTree {
       return this.insertNode(node.right, key)
     }
   }
-  fixTreeProperties(node) {}
+  fixTreeProperties(node) {
+    while (
+      node &&
+      node.parent &&
+      node.parent.color.isRed() &&
+      node.color !== Colors.BLACK
+    ) {
+      const grandParent = parent.parent
+      if (grandParent && grandParent.left === parent) {
+        const uncle = grandParent.right
+        if (uncle && uncle.color === Colors.RED) {
+          grandParent.color = Colors.RED
+          parent.color = Colors.BLACK
+          uncle.color = Colors.BLACK
+          node = grandParent
+        } else {
+          if (node === parent.right) {
+            this.rotationRR(parent)
+            node = parent
+            parent = node.parent
+          }
+          this.rotationLL(grandParent)
+          parent.color = Colors.BLACK
+          grandParent.color = Colors.RED
+          node = parent
+        }
+      } else {
+        const uncle = grandParent.left
+
+        if (uncle && uncle.color === Colors.RED) {
+          grandParent.color = Colors.RED
+          parent.color = Colors.BLACK
+          parent.color = Colors.BLACK
+          node = grandParent
+        } else {
+          if (node === parent.left) {
+            this.rotationLL(parent)
+            node = parent
+            parent = node.parent
+          }
+          this.rotationRR(grandParent)
+          parent.color = Colors.BLACK
+          grandParent.color = Colors.RED
+          node = parent
+        }
+      }
+      this.root.color = Colors.BLACK
+    }
+  }
   rotationLL(node) {}
-  rotationRR (node) {}
+  rotationRR(node) {}
 }

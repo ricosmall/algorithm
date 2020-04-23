@@ -58,7 +58,7 @@ describe('BinarySearchTree', () => {
 
   test('pre order traverse', () => {
     let result = []
-    let callback = val => result.push(val)
+    let callback = (val) => result.push(val)
     binarySearchTree.insert(4)
     binarySearchTree.insert(2)
     binarySearchTree.insert(3)
@@ -72,7 +72,7 @@ describe('BinarySearchTree', () => {
 
   test('in order traverse', () => {
     let result = []
-    let callback = val => result.push(val)
+    let callback = (val) => result.push(val)
     binarySearchTree.insert(4)
     binarySearchTree.insert(2)
     binarySearchTree.insert(3)
@@ -86,7 +86,7 @@ describe('BinarySearchTree', () => {
 
   test('post order traverse', () => {
     let result = []
-    let callback = val => result.push(val)
+    let callback = (val) => result.push(val)
     binarySearchTree.insert(4)
     binarySearchTree.insert(2)
     binarySearchTree.insert(3)

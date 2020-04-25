@@ -1,4 +1,5 @@
 import Node from './tree-node'
+import { Colors } from '../utils'
 
 export default class ReadBlackNode extends Node {
   constructor(key) {

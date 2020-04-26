@@ -9,5 +9,14 @@ describe('RedBlackTree', () => {
   test('insert key', () => {
     redBlackTree.insert(1)
     expect(redBlackTree.search(1)).toBe(true)
+    redBlackTree.insert(2)
+    expect(redBlackTree.search(2)).toBe(true)
+  })
+
+  test('remove key', () => {
+    redBlackTree.insert(1)
+    redBlackTree.insert(2)
+    expect(redBlackTree.remove(2)).toBe(true)
+    expect(redBlackTree.search(2)).toBe(false)
   })
 })

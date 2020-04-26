@@ -39,7 +39,7 @@ export default class RedBlackTree extends BinarySearchTree {
     while (
       node &&
       node.parent &&
-      node.parent.color.isRed() &&
+      node.parent.isRed() &&
       node.color !== Colors.BLACK
     ) {
       const grandParent = parent.parent

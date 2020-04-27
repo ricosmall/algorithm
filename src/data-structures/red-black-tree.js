@@ -84,6 +84,42 @@ export default class RedBlackTree extends BinarySearchTree {
       this.root.color = Colors.BLACK
     }
   }
-  rotationLL(node) {}
-  rotationRR(node) {}
+  rotationLL(node) {
+    const tmp = node.left
+    node.left = tmp.right
+    if (tmp.right && tmp.right.key) {
+      tmp.right.parent = node
+    }
+    tmp.parent = node.parent
+    if (!node.parent) {
+      this.root = tmp
+    } else {
+      if (node === node.parent.left) {
+        node.parent.left = tmp
+      } else {
+        node.parent.right = tmp
+      }
+    }
+    tmp.right = node
+    node.parent = tmp
+  }
+  rotationRR(node) {
+    const tmp = node.right
+    node.right = tmp.left
+    if (tmp.left && tmp.left.key) {
+      tmp.left.parent = node
+    }
+    tmp.parent = node.parent
+    if (!node.parent) {
+      this.root = tmp
+    } else {
+      if (node === node.parent.left) {
+        node.parent.left = tmp
+      } else {
+        node.parent.right = tmp
+      }
+    }
+    tmp.left = node
+    node.parent = tmp
+  }
 }

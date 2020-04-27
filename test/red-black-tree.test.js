@@ -16,7 +16,7 @@ describe('RedBlackTree', () => {
   test('remove key', () => {
     redBlackTree.insert(1)
     redBlackTree.insert(2)
-    expect(redBlackTree.remove(2)).toBe(true)
+    redBlackTree.remove(2)
     expect(redBlackTree.search(2)).toBe(false)
   })
 })

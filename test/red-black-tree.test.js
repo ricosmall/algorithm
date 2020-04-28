@@ -19,4 +19,11 @@ describe('RedBlackTree', () => {
     redBlackTree.remove(2)
     expect(redBlackTree.search(2)).toBe(false)
   })
+
+  test('search key', () => {
+    redBlackTree.insert(1)
+    redBlackTree.insert(2)
+    expect(redBlackTree.search(2)).toBe(true)
+    expect(redBlackTree.search(3)).toBe(false)
+  })
 })

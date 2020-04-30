@@ -25,5 +25,7 @@ describe('RedBlackTree', () => {
     redBlackTree.insert(2)
     expect(redBlackTree.search(2)).toBe(true)
     expect(redBlackTree.search(3)).toBe(false)
+    redBlackTree.insert(3)
+    expect(redBlackTree.search(3)).toBe(true)
   })
 })

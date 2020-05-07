@@ -14,6 +14,7 @@ describe('StackLinkedList', () => {
   })
 
   test('pop element', () => {
+    expect(stackLinkedList.pop()).toBe(undefined)
     stackLinkedList.push(1)
     stackLinkedList.push(2)
     expect(stackLinkedList.size()).toBe(2)
@@ -22,6 +23,7 @@ describe('StackLinkedList', () => {
   })
 
   test('peek element', () => {
+    expect(stackLinkedList.peek()).toBe(undefined)
     stackLinkedList.push(1)
     expect(stackLinkedList.size()).toBe(1)
     expect(stackLinkedList.peek()).toBe(1)
@@ -29,5 +31,20 @@ describe('StackLinkedList', () => {
     stackLinkedList.push(2)
     expect(stackLinkedList.peek()).toBe(2)
     expect(stackLinkedList.size()).toBe(2)
+  })
+
+  test('clear', () => {
+    expect(stackLinkedList.size()).toBe(0)
+    stackLinkedList.push(1)
+    stackLinkedList.push(2)
+    expect(stackLinkedList.size()).toBe(2)
+    stackLinkedList.clear()
+    expect(stackLinkedList.size()).toBe(0)
+  })
+
+  test('toString', () => {
+    stackLinkedList.push(1)
+    stackLinkedList.push(2)
+    expect(stackLinkedList.toString()).toBe('1,2')
   })
 })

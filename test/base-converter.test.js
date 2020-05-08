@@ -1,6 +1,10 @@
 import baseConverter from '../src/algorithms/base-converter'
 
 describe('algorithm baseConverter', () => {
+  test('transform decimal 0 to equal 0', () => {
+    expect(baseConverter(0)).toBe('0')
+  })
+
   test('transform decimal 1 to equal binary 1', () => {
     expect(baseConverter(1)).toBe('1')
   })

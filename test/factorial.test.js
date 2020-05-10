@@ -2,6 +2,7 @@ import { factorial, factorialIteration } from '../src/algorithms/factorial'
 
 describe('factorial', () => {
   test('factorial iteration', () => {
+    expect(factorial(-1)).toBe(undefined)
     expect(factorial(0)).toBe(1)
     expect(factorial(1)).toBe(1)
     expect(factorial(2)).toBe(2)
@@ -11,6 +12,7 @@ describe('factorial', () => {
   })
 
   test('factorial recuration', () => {
+    expect(factorialIteration(-1)).toBe(-1)
     expect(factorialIteration(0)).toBe(1)
     expect(factorialIteration(1)).toBe(1)
     expect(factorialIteration(2)).toBe(2)

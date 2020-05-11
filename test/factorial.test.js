@@ -12,7 +12,7 @@ describe('factorial', () => {
   })
 
   test('factorial recuration', () => {
-    expect(factorialIteration(-1)).toBe(-1)
+    expect(factorialIteration(-1)).toBe(undefined)
     expect(factorialIteration(0)).toBe(1)
     expect(factorialIteration(1)).toBe(1)
     expect(factorialIteration(2)).toBe(2)

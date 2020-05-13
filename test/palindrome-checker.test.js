@@ -1,6 +1,10 @@
 import palindromeChecker from '../src/algorithms/palindrome-checker'
 
 describe('palindromeChecker', () => {
+  test('"" is not a palindrome', () => {
+    expect(palindromeChecker('')).toBe(false)
+  })
+
   test('abc is not a palindrome', () => {
     expect(palindromeChecker('abc')).toBe(false)
   })

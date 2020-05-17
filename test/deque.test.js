@@ -12,11 +12,12 @@ describe('Deque', () => {
 
   test('add elements to front', () => {
     deque.addFront(1)
+    deque.removeFront()
     deque.addFront(2)
     deque.addFront(3)
-    expect(deque.size()).toBe(3)
+    expect(deque.size()).toBe(2)
     expect(deque.removeFront()).toBe(3)
-    expect(deque.removeBack()).toBe(1)
+    expect(deque.removeBack()).toBe(2)
   })
 
   test('add elements to back', () => {
@@ -116,6 +117,7 @@ describe('Deque', () => {
   })
 
   test('toString', () => {
+    expect(deque.toString()).toBe('')
     deque.addFront(1)
     deque.addBack(2)
     deque.addFront(3)

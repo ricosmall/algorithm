@@ -15,6 +15,10 @@ describe('DoublyLinkedList', () => {
   })
 
   test('insert elements', () => {
+    expect(doublyLinkedList.insert(1, -1)).toBe(false)
+    doublyLinkedList.insert(1, 0)
+    expect(doublyLinkedList.size()).toBe(1)
+    doublyLinkedList.remove(1)
     doublyLinkedList.push(1)
     doublyLinkedList.push(2)
     doublyLinkedList.insert(3, 1)
@@ -55,6 +59,8 @@ describe('DoublyLinkedList', () => {
   test('remove element at index', () => {
     doublyLinkedList.push(1)
     doublyLinkedList.push(2)
+    expect(doublyLinkedList.removeAt(0)).toBe(1)
+    doublyLinkedList.insert(1, 0)
     doublyLinkedList.push(3)
     expect(doublyLinkedList.size()).toBe(3)
     expect(doublyLinkedList.removeAt(1)).toBe(2)

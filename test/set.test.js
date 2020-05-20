@@ -13,6 +13,7 @@ describe('Set', () => {
     set.add(2)
     expect(set.has(2)).toBe(true)
     expect(set.size()).toBe(2)
+    expect(set.add(2)).toBe(false)
   })
 
   test('delete elements', () => {

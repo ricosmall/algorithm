@@ -48,6 +48,7 @@ describe('Stack', () => {
   })
 
   test('peek element', () => {
+    expect(stack.peek()).toBe(undefined)
     stack.push(1)
     stack.push(2)
 

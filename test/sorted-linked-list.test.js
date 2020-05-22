@@ -15,7 +15,7 @@ describe('SortedLinkedList', () => {
   })
 
   test('insert element', () => {
-    sortedLinkedList.push(1)
+    expect(sortedLinkedList.insert(1)).toBe(true)
     sortedLinkedList.push(2)
     expect(sortedLinkedList.size()).toBe(2)
     expect(sortedLinkedList.insert(4)).toBe(true)

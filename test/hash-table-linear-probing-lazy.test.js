@@ -31,6 +31,10 @@ describe('HashTableLinearProbingLazy', () => {
     value = 'test'
     expect(hashTable.put(key, value)).toBe(true)
     expect(hashTable.get(key)).toBe(value)
+    key = 'ehllo'
+    value = 'test2'
+    expect(hashTable.put(key, value)).toBe(true)
+    expect(hashTable.get(key)).toBe(value)
   })
 
   test('remove element', () => {
@@ -48,8 +52,14 @@ describe('HashTableLinearProbingLazy', () => {
     key = 'hello'
     value = 'world'
     hashTable.put(key, value)
+    key = 'lleoh'
+    value = 'hoho'
+    hashTable.put(key, value)
+    key = 'ehllo'
+    value = 'haha'
+    hashTable.put(key, value)
     expect(hashTable.get(key)).toBe(value)
-    expect(hashTable.remove(key)).toBe(true)
+    expect(hashTable.remove('hello')).toBe(true)
     expect(hashTable.get(key)).toBe(undefined)
   })
 

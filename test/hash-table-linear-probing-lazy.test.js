@@ -60,7 +60,8 @@ describe('HashTableLinearProbingLazy', () => {
     hashTable.put(key, value)
     expect(hashTable.get(key)).toBe(value)
     expect(hashTable.remove('hello')).toBe(true)
-    expect(hashTable.get(key)).toBe(undefined)
+    expect(hashTable.get('hello')).toBe(undefined)
+    expect(hashTable.get(key)).toBe('haha')
   })
 
   test('get element', () => {

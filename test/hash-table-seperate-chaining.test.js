@@ -35,6 +35,13 @@ describe('HashTableSeperateChaining', () => {
     expect(hashTable.put(key, value)).toBe(true)
     expect(hashTable.get(key)).toBe('world')
     expect(hashTable.remove(key)).toBe(true)
+    key = 'haha'
+    value = 'hehe'
+    expect(hashTable.put(key, value)).toBe(true)
+    key = 'hhaa'
+    value = 'hoho'
+    expect(hashTable.put(key, value)).toBe(true)
+    expect(hashTable.remove(key)).toBe(true)
     key  = 'test'
     expect(hashTable.remove(key)).toBe(false)
   })
